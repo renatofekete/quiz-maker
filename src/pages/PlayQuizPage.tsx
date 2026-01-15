@@ -1,8 +1,7 @@
-import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { PATHS } from "../routes/paths";
 
-const PlayQuizPage: React.FC = () => {
+const PlayQuizPage = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
 

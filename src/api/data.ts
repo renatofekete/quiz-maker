@@ -1,4 +1,4 @@
-import type { Quiz, Question } from "../types/quiz";
+import type { Quiz, Question } from "@/types";
 
 export const MOCK_QUESTIONS: Question[] = [
   { id: 1, question: "Koji je glavni grad Hrvatske?", answer: "Zagreb" },

@@ -1,13 +1,7 @@
-import './App.css'
+import { AppRouter } from "@/routes";
 
 function App() {
-  
-
-  return (
-    <>
-      <h1 className='text-3xl font-bold underline text-center'>Quiz App</h1>
-    </>
-  )
+  return <AppRouter />;
 }
 
-export default App
+export default App;

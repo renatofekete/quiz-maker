@@ -1,6 +1,4 @@
-import React from "react";
-
-const CreateQuizPage: React.FC = () => {
+const CreateQuizPage = () => {
   return (
     <div>
       <h1>Welcome to the Create Quiz Page</h1>

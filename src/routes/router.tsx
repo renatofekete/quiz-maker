@@ -1,9 +1,9 @@
-import { PATHS } from "./paths";
+import { PATHS } from "@/routes/paths";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomePage from "../pages/HomePage";
-import CreateQuizPage from "../pages/CreateQuizPage";
-import EditQuizPage from "../pages/EditQuizPage";
-import PlayQuizPage from "../pages/PlayQuizPage";
+import HomePage from "@/pages/HomePage";
+import CreateQuizPage from "@/pages/CreateQuizPage";
+import EditQuizPage from "@/pages/EditQuizPage";
+import PlayQuizPage from "@/pages/PlayQuizPage";
 
 export const router = createBrowserRouter([
   {

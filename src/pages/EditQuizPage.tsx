@@ -1,8 +1,7 @@
-import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { PATHS } from "../routes/paths";
+import { PATHS } from "@/routes";
 
-const EditQuizPage: React.FC = () => {
+const EditQuizPage = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
 
