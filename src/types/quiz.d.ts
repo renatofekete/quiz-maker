@@ -1,11 +1,11 @@
 export interface Question {
-    id: number;
-    question: string;
-    answer: string;
+  id: number;
+  question: string;
+  answer: string;
 }
 
 export interface Quiz {
-    id: number;
-    title: string;
-    questions: Question[];
+  id: number;
+  title: string;
+  questions: Question[];
 }
