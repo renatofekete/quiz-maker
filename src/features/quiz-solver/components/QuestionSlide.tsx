@@ -13,11 +13,7 @@ export const QuestionSlide: React.FC<QuestionSlideProps> = ({
   total,
 }) => {
   const [isRevealed, setIsRevealed] = useState(false);
-
-  // Reset revelation state when question changes
-  useEffect(() => {
-    setIsRevealed(false);
-  }, [question.id]);
+  useEffect(() => setIsRevealed(false), [question.id]);
 
   return (
     <div className="w-full max-w-2xl mx-auto">
@@ -32,12 +28,10 @@ export const QuestionSlide: React.FC<QuestionSlideProps> = ({
           />
         </div>
       </div>
-
-      <div className="bg-white rounded-3xl shadow-xl shadow-indigo-100/50 border border-gray-100 p-8 md:p-12 min-h-[300px] flex flex-col justify-center text-center transition-all duration-500 transform">
+      <div className="bg-white rounded-3xl shadow-xl shadow-indigo-100/50 border border-gray-100 p-8 md:p-12 min-h-[300px] flex flex-col justify-center text-center transition-all">
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
           {question.question}
         </h2>
-
         <div className="mt-12">
           {isRevealed ? (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -51,7 +45,7 @@ export const QuestionSlide: React.FC<QuestionSlideProps> = ({
           ) : (
             <button
               onClick={() => setIsRevealed(true)}
-              className="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold transition-all shadow-lg shadow-indigo-200 active:scale-95 cursor-pointer"
+              className="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold shadow-lg cursor-pointer transition-all active:scale-95"
             >
               Reveal Answer
             </button>

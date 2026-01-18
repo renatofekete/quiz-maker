@@ -30,20 +30,17 @@ export const useQuiz = (id?: number | string) => {
       id: number | string;
       data: Partial<QuizCreateRequest>;
     }) => quizService.update(id, data),
-    onSuccess: () =>
-      queryClient.invalidateQueries({
-        queryKey: ["quizzes", String(id)],
-        refetchType: "all",
-      }),
+    onSuccess: (_, { id }) => {
+      queryClient.invalidateQueries({ queryKey: ["quizzes"] });
+      queryClient.invalidateQueries({ queryKey: ["quiz", String(id)] });
+    },
   });
 
   const deleteMutation = useMutation({
     mutationFn: (id: number | string) => quizService.delete(id),
-    onSuccess: () =>
-      queryClient.invalidateQueries({
-        queryKey: ["quizzes", String(id)],
-        refetchType: "all",
-      }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["quizzes"] });
+    },
   });
 
   return {

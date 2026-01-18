@@ -1,10 +1,7 @@
+import { QuizForm } from "@/features/quiz-management";
+
 const CreateQuizPage = () => {
-  return (
-    <div>
-      <h1>Welcome to the Create Quiz Page</h1>
-      <p>Quiz creation page</p>
-    </div>
-  );
+  return <QuizForm />;
 };
 
 export default CreateQuizPage;
